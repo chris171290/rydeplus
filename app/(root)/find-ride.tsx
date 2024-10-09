@@ -33,7 +33,7 @@ const FindRide = () => {
           initialLocation={destinationAddress!}
           containerStyle="bg-neutral-100"
           textInputBackgroundColor="#f5f5f5"
-          handlePress={(location) => setUserLocation(location)}
+          handlePress={(location) => setDestinationLocation(location)}
         />
       </View>
       <CustomButton
