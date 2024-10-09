@@ -104,6 +104,7 @@ declare interface LocationStore {
   destinationLatitude: number | null;
   destinationLongitude: number | null;
   destinationAddress: string | null;
+  isCalculated: boolean;
   setUserLocation: ({
     latitude,
     longitude,

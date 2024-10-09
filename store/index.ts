@@ -8,6 +8,7 @@ export const useLocationStore = create<LocationStore>((set) => ({
   destinationLatitude: null,
   destinationLongitude: null,
   destinationAddress: null,
+  isCalculated: false,
   setUserLocation: ({
     latitude,
     longitude,
@@ -45,6 +46,11 @@ export const useLocationStore = create<LocationStore>((set) => ({
     // if driver is selected and now new location is set, clear the selected driver
     // const { selectedDriver, clearSelectedDriver } = useDriverStore.getState();
     // if (selectedDriver) clearSelectedDriver();
+  },
+  setIsCalculated: ({ isCalculated }: { isCalculated: boolean }) => {
+    set(() => ({
+      isCalculated: isCalculated,
+    }));
   },
 }));
 
